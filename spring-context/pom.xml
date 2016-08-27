@@ -45,7 +45,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>${spring.framework.version}</version>
+      <version>${spring.src.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -57,7 +57,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>${spring.framework.version}</version>
+      <version>${spring.src.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
