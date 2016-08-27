@@ -4,117 +4,139 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework</groupId>
   <artifactId>spring-context</artifactId>
-  <version>4.3.0.BUILD-SNAPSHOT</version>
-  <inceptionYear>2014</inceptionYear>
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+    <parent>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-projects</artifactId>
+		<version>4.3.2.gl.beta</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${org.apache.maven.plugins.maven-resources-plugin.version}</version>
+				<configuration>
+					<encoding>${encoding}</encoding>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
   <dependencies>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
-      <version>4.3.0.BUILD-SNAPSHOT</version>
+      <version>${spring.framework.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>4.3.0.BUILD-SNAPSHOT</version>
+      <version>${spring.framework.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-expression</artifactId>
-      <version>4.3.0.BUILD-SNAPSHOT</version>
+      <version>${spring.framework.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>4.3.0.BUILD-SNAPSHOT</version>
+      <version>${spring.framework.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-instrument</artifactId>
-      <version>4.3.0.BUILD-SNAPSHOT</version>
-      <scope>optional</scope>
+      <version>${spring.framework.version}</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
       <version>1</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>javax.ejb</groupId>
       <artifactId>ejb-api</artifactId>
       <version>3.0</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>javax.enterprise.concurrent</groupId>
       <artifactId>javax.enterprise.concurrent-api</artifactId>
       <version>1.0</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>javax.money</groupId>
       <artifactId>money-api</artifactId>
       <version>1.0</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
       <artifactId>javax.persistence</artifactId>
       <version>2.0.0</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>
       <version>1.0.0.GA</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>4.3.2.Final</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
       <version>2.9.3</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>1.8.9</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy-all</artifactId>
       <version>2.4.6</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.beanshell</groupId>
       <artifactId>bsh</artifactId>
       <version>2.0b4</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jruby</groupId>
       <artifactId>jruby</artifactId>
       <version>1.7.25</version>
-      <scope>optional</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

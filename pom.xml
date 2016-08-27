@@ -11,13 +11,16 @@
 		<spring.framework.version>4.3.2.RELEASE</spring.framework.version>
 		<spring.spring-web.version>4.3.2.gl.beta</spring.spring-web.version>
 		<java-version>1.8</java-version>
-		<org.apache.maven.plugins.maven-compiler-plugin.version>2.5.1</org.apache.maven.plugins.maven-compiler-plugin.version>
+		<org.apache.maven.plugins.maven-compiler-plugin.version>3.5.1</org.apache.maven.plugins.maven-compiler-plugin.version>
 		<org.apache.maven.plugins.maven-resources-plugin.version>2.6</org.apache.maven.plugins.maven-resources-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<encoding>UTF-8</encoding>
 	</properties>
 
 	<modules>
+		<module>spring-core</module>
+		<module>spring-beans</module>
+		<module>spring-context</module>
 		<module>spring-web</module>
 		<module>spring-webmvc</module>
 	</modules>
