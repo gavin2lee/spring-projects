@@ -689,22 +689,24 @@ public class GroovyBeanDefinitionReader extends AbstractBeanDefinitionReader imp
 		}
 	}
 
-	private GroovyDynamicElementReader createDynamicElementReader(String namespace) {
+	private GroovyDynamicElementReader createDynamicElementReader(final String namespace) {
 		XmlReaderContext readerContext = this.groovyDslXmlBeanDefinitionReader.createReaderContext(new DescriptiveResource(
 			"Groovy"));
-		BeanDefinitionParserDelegate delegate = new BeanDefinitionParserDelegate(readerContext);
-		boolean decorating = (this.currentBeanDefinition != null);
+		final BeanDefinitionParserDelegate delegate = new BeanDefinitionParserDelegate(readerContext);
+		final boolean decorating = (this.currentBeanDefinition != null);
 		if (!decorating) {
 			this.currentBeanDefinition = new GroovyBeanDefinitionWrapper(namespace);
 		}
-		return new GroovyDynamicElementReader(namespace, this.namespaces, delegate, this.currentBeanDefinition, decorating) {
-			@Override
-			protected void afterInvocation() {
-				if (!this.decorating) {
-					currentBeanDefinition = null;
-				}
-			}
-		};
+		
+		return new GroovyDynamicElementReader(namespace, this.namespaces, delegate, this.currentBeanDefinition, decorating);
+//		return new GroovyDynamicElementReader(namespace, this.namespaces, delegate, this.currentBeanDefinition, decorating) {
+//			@Override
+//			protected void afterInvocation() {
+//				if (!this.decorating) {
+//					currentBeanDefinition = null;
+//				}
+//			}
+//		};
 	}
 
 

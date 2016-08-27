@@ -20,6 +20,7 @@ import groovy.xml.StreamingMarkupBuilder
 import org.springframework.beans.factory.config.BeanDefinitionHolder
 import org.springframework.beans.factory.xml.BeanDefinitionParserDelegate
 import org.w3c.dom.Element
+import java.util.Map
 
 /**
  * Used by GroovyBeanDefinitionReader to read a Spring XML namespace expression
