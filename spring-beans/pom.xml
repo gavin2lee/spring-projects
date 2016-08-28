@@ -22,22 +22,6 @@
 				<configuration>
 					<source>${java-version}</source>
 					<target>${java-version}</target>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>${org.apache.maven.plugins.maven-resources-plugin.version}</version>
-				<configuration>
-					<encoding>${encoding}</encoding>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
 					<compilerId>groovy-eclipse-compiler</compilerId>
 					<verbose>true</verbose>
 				</configuration>
@@ -50,11 +34,27 @@
 				</dependencies>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${org.apache.maven.plugins.maven-resources-plugin.version}</version>
+				<configuration>
+					<encoding>${encoding}</encoding>
+				</configuration>
+			</plugin>
+
 		</plugins>
 
 	</build>
 
 	<dependencies>
+		<dependency>
+			<groupId>groovy-locallib</groupId>
+			<artifactId>groovy-locallib</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/groovy-locallib.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-all</artifactId>
