@@ -20,7 +20,9 @@
 
 	<modules>
 		<module>spring-core</module>
+		<!-- 
 		<module>spring-beans</module>
+		 -->
 		<module>spring-context</module>
 		<module>spring-web</module>
 		<module>spring-webmvc</module>
