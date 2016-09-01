@@ -1,3 +1,0 @@
-<ul class="clearfix f_yahei nav1" id="nav1" style="top: 0px;">
-</ul>
-<input type="hidden" id="globalDeptCode" value="$!user.deptCode">
