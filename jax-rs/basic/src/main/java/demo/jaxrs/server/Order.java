@@ -66,4 +66,11 @@ public class Order {
         p.setDescription("product 323");
         products.put(p.getId(), p);
     }
+
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", description=" + description + ", products=" + products + "]";
+	}
+    
+    
 }

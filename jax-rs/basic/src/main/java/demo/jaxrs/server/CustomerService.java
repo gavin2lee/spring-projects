@@ -100,6 +100,8 @@ public class CustomerService {
         System.out.println("----invoking getOrder, Order id is: " + orderId);
         long idNumber = Long.parseLong(orderId);
         Order c = orders.get(idNumber);
+        
+        System.out.println("Order got:"+c.toString());
         return c;
     }
 

@@ -40,4 +40,11 @@ public class Product {
     public void setDescription(String d) {
         this.description = d;
     }
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", description=" + description + "]";
+	}
+    
+    
 }
