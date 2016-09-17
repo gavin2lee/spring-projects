@@ -95,6 +95,7 @@ public class CustomerService {
         return r;
     }
 
+    @GET
     @Path("/orders/{orderId}/")
     public Order getOrder(@PathParam("orderId") String orderId) {
         System.out.println("----invoking getOrder, Order id is: " + orderId);
