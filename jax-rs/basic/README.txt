@@ -69,5 +69,8 @@ Using either UNIX or Windows:
 
 To remove the target dir, run mvn clean".
 
+-Djava.util.logging.config.file=logging.properties
+-Djava.util.logging.config.file=D:/GitRepo/spring-projects/jax-rs/basic/src/main/resources/logging.properties
+
 
 
