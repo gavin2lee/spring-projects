@@ -24,25 +24,25 @@ import org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider;
 
 public class Server {
 
-    protected Server() throws Exception {
-        JAXRSServerFactoryBean sf = new JAXRSServerFactoryBean();
-        sf.setResourceClasses(CustomerService.class,IProductService.class);
-        sf.setResourceProvider(CustomerService.class, 
-            new SingletonResourceProvider(new CustomerService()));
-        sf.setResourceProvider(IProductService.class, 
-                new SingletonResourceProvider(new ProductService()));
-        sf.setAddress("http://localhost:9009/");
+	protected Server() throws Exception {
+		JAXRSServerFactoryBean sf = new JAXRSServerFactoryBean();
+		sf.setResourceClasses(CustomerService.class, IProductService.class);
+		sf.setResourceProvider(CustomerService.class, new SingletonResourceProvider(new CustomerService()));
+		sf.setResourceProvider(IProductService.class, new SingletonResourceProvider(new ProductService()));
 
-        sf.create();
-    }
+		sf.setResourceProvider(IAddressService.class, new SingletonResourceProvider(new AddressService()));
+		sf.setAddress("http://localhost:9009/");
 
-    public static void main(String args[]) throws Exception {
-        new Server();
-        System.out.println("Server ready...");
+		sf.create();
+	}
 
-//        Thread.sleep(5 * 6000 * 1000);
-        System.in.read();
-        System.out.println("Server exiting");
-        System.exit(0);
-    }
+	public static void main(String args[]) throws Exception {
+		new Server();
+		System.out.println("Server ready...");
+
+		// Thread.sleep(5 * 6000 * 1000);
+		System.in.read();
+		System.out.println("Server exiting");
+		System.exit(0);
+	}
 }
