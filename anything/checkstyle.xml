@@ -78,7 +78,7 @@
         <module name="MethodLength">
             <property name="max" value="150" />
             <property name="severity" value="error" />
-            <message key="maxLen.method" value="the lines within a method cannot be more than 150." />
+            <message key="maxLen.method" value="the length of a method cannot be more than 150." />
         </module>
 
         <module name="NestedIfDepth">
